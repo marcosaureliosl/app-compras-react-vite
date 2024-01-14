@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "rimraf temp-gh-pages && gh-pages -d dist -t -b main -o https://github.com/marcosaureliosl/app-compras-react-vite.git"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -27,6 +27,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "^6.1.1",
+    "rimraf": "^5.0.5",
     "vite": "^5.0.8"
   }
 }
