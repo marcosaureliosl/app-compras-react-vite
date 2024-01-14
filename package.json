@@ -1,5 +1,5 @@
 {
-  "homepage": "https://marcosaureliosl.github.oi//app-compras-react-vite",
+  "homepage": "https://marcosaureliosl.github.oi/app-compras-react-vite",
   "name": "meu-primeiro-projeto-react",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy": "npm rum build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
