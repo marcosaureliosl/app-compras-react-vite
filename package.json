@@ -10,8 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "rimraf temp-gh-pages && gh-pages -d dist -b main -r https://github.com/marcosaureliosl/app-compras-react-vite.git"
-
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -36,4 +35,3 @@
     "vite": "^5.0.8"
   }
 }
-
