@@ -1,5 +1,4 @@
-
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { v4 } from "uuid";
 import { AddButton, Container, Product, MeuButton } from "./Styles";
 
@@ -12,8 +11,14 @@ function App() {
   }
 
   function adicionarProduto() {
-    setProdutos([{ id: v4(), nome: inputRef.current.value }, ...produtos]);
-    inputRef.current.value = "";
+    const nomeProduto = inputRef.current.value.trim();
+
+    // Verifica se o nome do produto é válido
+    if (nomeProduto !== "") {
+      setProdutos([{ id: v4(), nome: nomeProduto }, ...produtos]);
+      inputRef.current.value = "";
+    }
+    // Caso contrário, você pode exibir uma mensagem de erro ou tomar outra ação desejada.
   }
 
   function deletarProduto(id) {
@@ -47,4 +52,3 @@ function App() {
 }
 
 export default App;
-
